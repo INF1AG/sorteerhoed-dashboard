@@ -1,0 +1,23 @@
+body {
+	background-image: url("./zweinstein.png");
+	background-size: cover;
+	display: grid;
+	justify-content: center;
+	font-family: 'Noto Serif Display';
+}
+
+ul {
+	color: black;
+	background-color: rgba(255,255,255,0.7);
+	border: 1px solid white;
+	
+	list-style: none;
+	padding: 1.2em 0px;
+	border-radius: 18px;
+
+	font-size: 18pt;
+}
+
+li {
+	padding: 0px 1.2em;
+}
