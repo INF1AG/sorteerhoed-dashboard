@@ -3,6 +3,7 @@
   	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./style.css">
 		<title>Welcome to Firebase Hosting</title>
   	</head>
   	<body>
@@ -29,7 +30,8 @@
 			const querySnapshot = await getDocs(collection(db, "thdnrsorteerhoed"))
 
 			querySnapshot.forEach((doc) => {
-				let user = document.createElement('li').innerHTML = doc.data().username
+				let user = document.createElement('li')
+				user.appendChild(document.createTextNode(doc.data().username))
 				document.getElementById("users").append(user)
 			})
 		</script>
