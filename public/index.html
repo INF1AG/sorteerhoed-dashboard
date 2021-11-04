@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Welcome to Firebase Hosting</title>
+  	</head>
+  	<body>
+		<ul id="users"></ul>
+
+    	<script type="module">
+			import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"
+			import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-analytics.js";
+			import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-firestore.js";
+
+			const firebaseConfig = {
+    			apiKey: "AIzaSyCQ4nn_lOY-MwvF2V-p_u-obED1no3rTOM",
+    			authDomain: "thndr-1ca0e.firebaseapp.com",
+    			projectId: "thndr-1ca0e",
+    			storageBucket: "thndr-1ca0e.appspot.com",
+    			messagingSenderId: "470053217658",
+    			appId: "1:470053217658:web:a06dd609aebe340cc422c3",
+    			measurementId: "G-F61JBS3JVH"
+  			};
+
+			const app = initializeApp(firebaseConfig);
+			const analytics = getAnalytics(app);
+			const db = getFirestore(app);
+			const querySnapshot = await getDocs(collection(db, "thdnrsorteerhoed"))
+
+			querySnapshot.forEach((doc) => {
+				let user = document.createElement('li').innerHTML = doc.data().username
+				document.getElementById("users").append(user)
+			})
+		</script>
+  	</body>
+</html>

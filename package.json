@@ -1,0 +1,20 @@
+{
+	"name": "sorteerhoed-dashboard",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+	"start": "firebase serve"
+	},
+	"repository": {
+	"type": "git",
+	"url": "git+https://github.com/INF1AG/sorteerhoed-dashboard.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+	"url": "https://github.com/INF1AG/sorteerhoed-dashboard/issues"
+	},
+	"homepage": "https://github.com/INF1AG/sorteerhoed-dashboard#readme",
+	"dependencies": {}
+}
