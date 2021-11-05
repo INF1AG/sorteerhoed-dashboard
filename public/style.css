@@ -1,23 +1,102 @@
+* {
+	margin: 0px;
+}
+
 body {
+	height: 100vh;
 	background-image: url("./zweinstein.png");
 	background-size: cover;
+	background-repeat: no-repeat;
 	display: grid;
-	justify-content: center;
+	grid-template-columns: 1fr 12vw 1fr 12vw 1fr 12vw 1fr 12vw 1fr;
 	font-family: 'Noto Serif Display';
 }
 
-ul {
-	color: black;
-	background-color: rgba(255,255,255,0.7);
-	border: 1px solid white;
-	
+#SE {
+	background-color: rgb(167, 133, 47);
+	grid-column: 2/3;
+}
+
+#BDaM {
+	background-color: rgb(60, 90, 129);
+	grid-column: 4/5;
+}
+
+#IaT {
+	background-color: rgb(136, 28, 37);
+	grid-column: 6/7;
+}
+
+#FICT {
+	background-color: rgb(28, 59, 52);
+	grid-column: 8/9;
+}
+
+ul {	
 	list-style: none;
 	padding: 1.2em 0px;
-	border-radius: 18px;
-
+	margin-top: 60px;
 	font-size: 18pt;
 }
 
-li {
-	padding: 0px 1.2em;
+#SE li, #SE h1 {
+	background-image: linear-gradient(
+		to right,
+		#000000 0,
+		#2b2011 22%, 
+		#292615 45%,
+		#303027 50%,
+		#292615 55%,
+		#2b2011 78%,
+		#000000 100%
+	);
+}
+
+#BDaM li, #BDaM h1 {
+	background-image: linear-gradient(
+		to right,
+		#cb9b51 0,
+		#cb9b51 22%, 
+		#f6e27a 45%,
+		#f6f2c0 50%,
+		#f6e27a 55%,
+		#cb9b51 78%,
+		#cb9b51 100%
+	);
+}
+
+#IaT li,#IaT h1 {
+	background-image: linear-gradient(
+		to right,
+		#cb9b51 0,
+		#cb9b51 22%, 
+		#f6e27a 45%,
+		#f6f2c0 50%,
+		#f6e27a 55%,
+		#cb9b51 78%,
+		#cb9b51 100%
+	);
+}
+
+#FICT li, #FICT h1 {
+	background-image: linear-gradient(
+		to right,
+		#33302b 0,
+		#7e7569 22%, 
+		#9e9c91 45%,
+		#c9c8c8 50%,
+		#9e9c91 55%,
+		#7e7569 78%,
+		#33302b 100%
+	);
+}
+
+li, h1 {
+	text-align: center;
+	font-family: 'Times New Roman',serif;
+	letter-spacing: 1px;
+	font-size: 18pxpx;
+	font-weight: bold;
+	color: transparent;
+	-webkit-background-clip:text;
 }

@@ -7,10 +7,13 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
 		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;800&display=swap" rel="stylesheet">
-		<title>Welcome to Firebase Hosting</title>
+		<title>THNDR dashboard</title>
   	</head>
   	<body>
-		<ul id="users"></ul>
+		<ul id="SE"><h1 style="font-size: 24pt">SE</h1></ul>
+		<ul id="BDaM"><h1 style="font-size: 24pt">BDaM</h1></ul>
+		<ul id="IaT"><h1 style="font-size: 24pt">IaT</h1></ul>
+		<ul id="FICT"><h1 style="font-size: 24pt">FICT</h1></ul>
 
     	<script type="module">
 			import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"
@@ -35,9 +38,16 @@
 			querySnapshot.forEach((doc) => {
 				let user = document.createElement('li')
 				let info = document.createElement('p')
-				info.innerHTML = `<b>${doc.data().username}</b> hoort bij <b>${doc.data().points}</b>`
+				const specs = ["SE", "BDaM", "IaT", "FICT"]
+
+				let specs_with_points = doc.data().points.map((e, i) => {
+					return [e, specs[i]]
+				}).sort((a, b) => a[0] < b[0])
+
+				console.log(specs_with_points)
+				info.innerHTML = `<b>${doc.data().username}</b>`
 				user.appendChild(info)
-				document.getElementById("users").append(user)
+				document.getElementById(specs_with_points[0][1]).append(user)
 			})
 		</script>
   	</body>
